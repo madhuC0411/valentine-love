@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valentine Surprise ❤️</title>
+
+<style>
+body {
+  background: #ffd1dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background: green;
+  color: white;
+}
+
+#noBtn {
+  background: red;
+  color: white;
+  position: absolute;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<img src="bubu-happy-dudu-mcruqb7z5ltuz8y5.gif">
+
+<h2>Will you be my Valentine? ❤️</h2>
+
+<button id="yesBtn" onclick="openPage()">Yes</button>
+<button id="noBtn" onmouseover="runAway()">No</button>
+
+</div>
+
+<script>
+
+let yesSize = 18;
+
+function runAway() {
+
+  yesSize += 5;
+  document.getElementById("yesBtn").style.fontSize = yesSize + "px";
+
+  let noBtn = document.getElementById("noBtn");
+
+  let x = Math.random() * 200;
+  let y = Math.random() * 150;
+
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+}
+
+function openPage() {
+  window.location.href = "secret.html";
+}
+
+</script>
+
+</body>
+</html>
